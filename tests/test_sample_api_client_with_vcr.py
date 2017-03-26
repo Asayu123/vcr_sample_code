@@ -13,7 +13,7 @@ vcr_instance = vcr.VCR(  # Following option is often used.
 # Test Case Definition Starts from here.
 
 
-class TestApiClient(TestCase):
+class TestSampleApiClient(TestCase):
         @vcr_instance.use_cassette
         def test_get_todo_by_title(self):
 

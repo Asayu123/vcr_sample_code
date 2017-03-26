@@ -3,7 +3,7 @@ from bin.sample_api_client import SampleApiClient
 # Test Case Definition Starts from here.
 
 
-class TestApiClient(TestCase):
+class TestSampleApiClient(TestCase):
 
         def test_get_todo_by_title(self):
 
