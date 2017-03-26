@@ -5,12 +5,12 @@ from bin.sample_api_client import SampleApiClient
 
 class TestApiClient(TestCase):
 
-        def test_todo_filter(self):
+        def test_get_todo_by_title(self):
 
             client = SampleApiClient(url='jsonplaceholder.typicode.com')
             # a free online REST service that produces some fake JSON data.
 
-            result = client.get_todo(title="delectus aut autem")
+            result = client.get_todo_by_title(title="delectus aut autem")
 
             expected = [
                 {

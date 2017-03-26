@@ -7,7 +7,7 @@ class SampleApiClient(object):
     def __init__(self, url):
         self.base_url = url
 
-    def get_todo(self, title=None):  # Specify title option to filter todos by title.
+    def get_todo_by_title(self, title=None):  # Specify title option to filter todos by title.
 
         conn = client.HTTPConnection(self.base_url, port=80)
 
