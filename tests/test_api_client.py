@@ -1,6 +1,5 @@
-import vcr
-
 from unittest import TestCase
+import vcr
 from bin.sample_api_client import SampleApiClient
 
 # Instantiate VCR in order to Use VCR in test scenario.
