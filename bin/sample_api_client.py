@@ -6,7 +6,6 @@ class SampleApiClient(object):
 
     def __init__(self, url):
         self.base_url = url
-        pass
 
     def get_todo(self, title=None):  # Specify title option to filter todos by title.
 
