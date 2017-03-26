@@ -1,7 +1,7 @@
 import vcr
-from unittest import TestCase
 
-from bin.sample_api_client import SampleTodoApiClient
+from unittest import TestCase
+from bin.sample_api_client import SampleApiClient
 
 # Instantiate VCR in order to Use VCR in test scenario.
 
@@ -18,16 +18,18 @@ class TestApiClient(TestCase):
 
         def test_todo_filter(self):
 
-            test_target = SampleTodoApiClient()
-            test_method = test_target.get_todo
+            client = SampleApiClient(url='jsonplaceholder.typicode.com')
+            # a free online REST service that produces some fake JSON data.
 
-            result = test_method(obj_id=1)
+            result = client.get_todo(title="delectus aut autem")
 
-            expected = {
+            expected = [
+                {
                 "userId": 1,
                 "id": 1,
                 "title": "delectus aut autem",
                 "completed": False
               }
+            ]
 
-            self.assertEqual(result, expected)
+            self.assertEqual(expected, result)
