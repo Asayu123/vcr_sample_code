@@ -7,10 +7,10 @@ class TestSampleApiClient(TestCase):
 
         def test_get_todo_by_title(self):
 
-            client = SampleApiClient(url='jsonplaceholder.typicode.com')
+            client = SampleApiClient(base_url='jsonplaceholder.typicode.com')
             # a free online REST service that produces some fake JSON data.
 
-            result = client.get_todo(key='title', value="delectus aut autem")
+            result = client.get(resource='todos', key='title', value="delectus aut autem")
 
             expected = [
                 {
