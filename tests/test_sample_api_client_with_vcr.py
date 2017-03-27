@@ -20,7 +20,7 @@ class TestSampleApiClient(TestCase):
             client = SampleApiClient(url='jsonplaceholder.typicode.com')
             # a free online REST service that produces some fake JSON data.
 
-            result = client.get_todo_by_title(title="delectus aut autem")
+            result = client.get_todo(key='title', value="delectus aut autem")
 
             expected = [
                 {
