@@ -11,11 +11,11 @@ class SampleApiClient(object):
         """
         self.base_url = base_url
 
-    def get(self, resource, key='id', value=None):  # Specify key and value to filter todos.
+    def get(self, resource, key='id', value=None):
         """
         An method to get entry of specific resources that satisfy following searching option.
         :param resource: a relative path from base_url that correspond to resource you want to access.(String)
-        :param key: a attribute key of resource you want to filter by. default: id (String)
+        :param key: an attribute name of resource you want to filter by. default: id (String)
         :param value: a value of an attribute you want to filter by. (String)
         :return: filtered_data: a result of operation. (Array of Dictionary)
         """
